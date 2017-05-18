@@ -42,6 +42,7 @@ class ReadRssFeed(object):
 
     def run(self, voice_command):
         res = self.getNewsFeed()
+        self.resetVariables()
 
         # If res is empty then let user know
         if res == "":
@@ -97,6 +98,12 @@ class ReadRssFeed(object):
             resultList.append(res.entries[x])
 
         return resultList
+
+    def resetVariables(self):
+        self.cancelSpeech = False
+        self.threadListenButton = None
+        self.threadSpeech = None
+        self.count = 0
 
     def listenForButton(self):
         while not self.cancelSpeech:
