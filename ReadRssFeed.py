@@ -192,5 +192,5 @@ if __name__ == '__main__':
 
 
 # usage of it
-# actor.add_keyword(_('the news'), ReadRssFeed(say, "http://feeds.bbci.co.uk/news/rss.xml?edition=uk#", 10. ['title']))
+# actor.add_keyword(_('the news'), ReadRssFeed(say, "http://feeds.bbci.co.uk/news/rss.xml?edition=uk#", 10, ['title']))
 
